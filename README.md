@@ -42,6 +42,7 @@ Sumo Logic (HTTP Source logs)
 ### Query
 
 ```
+_sourceCategory="pe-coding-test/http"
 | json "endpoint", "response_time_ms" as endpoint, response_time_ms nodrop
 | where endpoint = "/api/data"
 | where response_time_ms > 3000
@@ -141,12 +142,12 @@ Then confirm the subscription in your email.
 
 ## Verification Checklist
 
-- [] Terraform creates EC2, Lambda, SNS with least-privilege IAM
-- [] Lambda validates token and rejects invalid requests
-- [] Lambda reboots instance and publishes SNS notification
-- [] Sumo query correctly identifies slow requests (>3s)
-- [] Sumo alert triggers when threshold exceeded (>5 in 10m)
-- [] Webhook successfully invokes Lambda
+- [x] Terraform creates EC2, Lambda, SNS with least-privilege IAM
+- [x] Lambda validates token and rejects invalid requests
+- [x] Lambda reboots instance and publishes SNS notification
+- [x] Sumo query correctly identifies slow requests (>3s)
+- [x] Sumo alert triggers when threshold exceeded (>5 in 10m)
+- [x] Webhook successfully invokes Lambda
 
 ---
 
