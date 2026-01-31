@@ -1,0 +1,5 @@
+| json "endpoint", "response_time_ms" as endpoint, response_time_ms nodrop
+| where endpoint = "/api/data"
+| where response_time_ms > 3000
+| timeslice 10m
+| count as slow_requests by _timeslice
