@@ -153,7 +153,7 @@ Then confirm the subscription in your email.
 
 ## Screen Recordings
 
-- **Recording:** [Add link after recording]
+- **Recording:** https://drive.google.com/file/d/1qUjuaAjNTLuFvudoxDfixHzpXFLNJ37Y/view?usp=sharing
 
 ---
 
